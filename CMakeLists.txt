@@ -1,4 +1,4 @@
-# Copyright (c) 2012-2018 LG Electronics, Inc.
+# Copyright (c) 2012-2019 LG Electronics, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -44,13 +44,10 @@ add_custom_target(generate ALL DEPENDS ext-timezones.json)
 
 # install json files in /usr/palm
 MESSAGE (STATUS, "Install json files in ${WEBOS_INSTALL_WEBOS_PREFIX}")
-install(DIRECTORY files/conf/ DESTINATION ${WEBOS_INSTALL_WEBOS_PREFIX} 
-        PATTERN "svn"         EXCLUDE 
+install(DIRECTORY files/conf/ DESTINATION ${WEBOS_INSTALL_WEBOS_PREFIX}
+        PATTERN "svn"         EXCLUDE
         PATTERN ".svn"        EXCLUDE
 	PATTERN "fonts"       EXCLUDE
-	PATTERN "signage"     EXCLUDE
-	PATTERN "apollo"      EXCLUDE
-	PATTERN "defaultPreferences.txt" EXCLUDE
 	PATTERN "region.json" EXCLUDE
 	PATTERN ".json"       PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE
 )
@@ -59,7 +56,7 @@ install(FILES ${ext_timezones_json} DESTINATION ${WEBOS_INSTALL_WEBOS_PREFIX}
 
 # install region json file in /etc/palm
 MESSAGE (STATUS, "Install region.json in ${WEBOS_INSTALL_WEBOS_SYSCONFDIR}")
-install(FILES files/conf/region.json DESTINATION ${WEBOS_INSTALL_WEBOS_SYSCONFDIR} 
+install(FILES files/conf/region.json DESTINATION ${WEBOS_INSTALL_WEBOS_SYSCONFDIR}
 	PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE)
 
 # install font files /usr/share/fonts
@@ -72,4 +69,6 @@ install(DIRECTORY files/conf/fonts DESTINATION ${WEBOS_INSTALL_DATADIR}
     PATTERN ".ttf" PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE
     PATTERN ".txt" PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE
 )
+install(FILES files/conf/defaultPreferences.txt DESTINATION ${WEBOS_INSTALL_WEBOS_SYSCONFDIR}
+        PERMISSIONS OWNER_READ OWNER_WRITE GROUP_READ WORLD_READ)
 

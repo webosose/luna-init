@@ -1,5 +1,15 @@
 {
-  "preferences": {
+"preferences": {
+		"timeZone": {
+			"Country": "United States of America",
+			"CountryCode": "US",
+			"ZoneID": "America\/Los_Angeles",
+			"City": "Los Angeles",
+			"Description": "Pacific Time",
+			"offsetFromUTC": -480,
+			"supportsDST": 1 ,
+			"preferred":true
+		},
 		"useNetworkTime":		true,
 		"useNetworkTimeZone":	true,
 		"timeFormat":			"HH12",
@@ -28,8 +38,8 @@
 		"timeZonesUseGenericExclusively": false,
 		"AllowGenericTimezones" : true,
 		"AllowMCCAssistedTimezones" : true,
-		"AllowNTPTime" : false,
-		"timeSources" : ["sdp","broadcast-adjusted","broadcast","micom"],
+		"AllowNTPTime" : true,
+		"timeSources" : ["ntp","sdp","broadcast-adjusted","broadcast","micom"],
 		"timeDriftPeriodHr": -1,
 		"dockModeSoundPref" : "systemsettings",
 		"x_palm_textinput" : {
