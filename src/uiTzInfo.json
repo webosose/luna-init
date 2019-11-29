@@ -1,9 +1,4 @@
 {
-  "America/Argentina/San_Luis": {
-    "Country": "Argentina",
-    "Description": "San Luis Time",
-    "City": "San Luis"
-  },
   "Atlantic/Canary": {
     "Country": "Spain",
     "Description": "Western European Time",
@@ -122,11 +117,6 @@
     "Country": "Kenya",
     "Description": "Eastern African Time",
     "City": "Nairobi"
-  },
-  "Europe/Simferopol": {
-    "Country": "Russia",
-    "Description": "Eastern European Time",
-    "City": "Simferopol"
   },
   "Europe/Tirane": {
     "Country": "Albania",
