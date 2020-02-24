@@ -1,4 +1,4 @@
-# Copyright (c) 2012-2019 LG Electronics, Inc.
+# Copyright (c) 2012-2020 LG Electronics, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -27,7 +27,7 @@ webos_config_build_doxygen(doc Doxyfile)
 add_custom_command(
 	OUTPUT ext-timezones.json
 	COMMAND echo "Generating ext-timezones.json"
-	COMMAND python2
+	COMMAND python3
 		${CMAKE_SOURCE_DIR}/src/gen-ext-timezones.py
 		--white-list-only
 		-s ${CMAKE_SOURCE_DIR}/src
