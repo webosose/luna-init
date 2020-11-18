@@ -1,4 +1,9 @@
 {
+  "America/Argentina/San_Luis": {
+    "Country": "Argentina",
+    "Description": "San Luis Time",
+    "City": "San Luis"
+  },
   "Atlantic/Canary": {
     "Country": "Spain",
     "Description": "Western European Time",
