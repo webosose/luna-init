@@ -98,7 +98,6 @@
 { "Country": "Brazil", 			"CountryCode": "BR", "ZoneID": "America\/Araguaina", 	"City": "Araguaína",  	"Description": "Brasilia Time", 		"offsetFromUTC": -180, "supportsDST": 0 },
 { "Country": "Brazil", 			"CountryCode": "BR", "ZoneID": "America\/Belem", 	"City": "Belém",  	"Description": "Brasilia Time", 		"offsetFromUTC": -180, "supportsDST": 0 },
 { "Country": "Brazil", 			"CountryCode": "BR", "ZoneID": "America\/Sao_Paulo", 	"City": "São Paulo",  	"Description": "Brasilia Time", 		"offsetFromUTC": -180, "supportsDST": 1 , "preferred":true },
-{ "Country": "Greenland", 		"CountryCode": "GL", "ZoneID": "America\/Godthab", 	"City": "Godthab",  	"Description": "Western Greenland Time", 	"offsetFromUTC": -180, "supportsDST": 1 },
 { "Country": "Suriname", 		"CountryCode": "SR", "ZoneID": "America\/Paramaribo", 	"City": "Paramaribo",  	"Description": "Suriname Time", 		"offsetFromUTC": -180, "supportsDST": 0 , "preferred":true  },
 { "Country": "Uruguay", 		"CountryCode": "UY", "ZoneID": "America\/Montevideo", 	"City": "Montevideo",  	"Description": "Uruguay Time", 			"offsetFromUTC": -180, "supportsDST": 1 },
 

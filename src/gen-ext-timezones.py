@@ -44,6 +44,9 @@ def supplementOmittedTimeZones():
 		if requiredZone == 'America/Montreal' and requiredZone not in pytz.country_timezones['CA']:
 			pytz.country_timezones['CA'].append('America/Montreal')
 
+		if requiredZone == 'America/Godthab' and requiredZone not in pytz.country_timezones['GL']:
+			pytz.country_timezones['GL'].append('America/Godthab')
+
 	return
 
 def findDST(tz):

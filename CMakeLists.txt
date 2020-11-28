@@ -27,7 +27,7 @@ webos_config_build_doxygen(doc Doxyfile)
 add_custom_command(
 	OUTPUT ext-timezones.json
 	COMMAND echo "Generating ext-timezones.json"
-	COMMAND python3
+	COMMAND python
 		${CMAKE_SOURCE_DIR}/src/gen-ext-timezones.py
 		--white-list-only
 		-s ${CMAKE_SOURCE_DIR}/src

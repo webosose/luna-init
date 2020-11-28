@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Copyright (c) 2014-2018 LG Electronics, Inc.
+# Copyright (c) 2014-2020 LG Electronics, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -177,6 +177,7 @@ u"RET": u"Réunion Time",
 u"ROTT": u"Rothera Research Station Time",
 u"SAKT": u"Sakhalin Island time",
 u"SAMT": u"Samara Time",
+u"SLT": u"San Luis Time",
 u"SAST": u"South African Standard Time",
 u"SBT": u"Solomon Islands Time",
 u"SCT": u"Seychelles Time",
@@ -211,6 +212,7 @@ u"WAT": u"West Africa Time",
 u"WEDT": u"Western European Daylight Time",
 u"WEST": u"Western European Summer Time",
 u"WET": u"Western European Time",
+u"WGT": u"Western Greenland Time",
 u"WST": u"Western Standard Time",
 u"YAKT": u"Yakutsk Time",
 u"YEKT": u"Yekaterinburg Time",
