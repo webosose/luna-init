@@ -2,12 +2,12 @@
 "preferences": {
 		"timeZone": {
 			"Country": "",
-			"Description": "Manual Time Zone",
-			"ZoneID": "Manual",
+			"Description": "GMT",
+			"ZoneID": "Etc/GMT-0",
 			"City": "",
-			"offsetFromUTC": "NA",
+			"offsetFromUTC": "0",
 			"CountryCode": "",
-			"supportsDST": "NA"
+			"supportsDST": "0"
 		},
 		"useNetworkTime":		false,
 		"useNetworkTimeZone":	true,
