@@ -9,7 +9,7 @@
 			"CountryCode": "",
 			"supportsDST": "0"
 		},
-		"useNetworkTime":		false,
+		"useNetworkTime":		true,
 		"useNetworkTimeZone":	true,
 		"timeFormat":			"HH12",
 		"locale":				{ "languageCode":"en", "countryCode":"us", "phoneRegion": { "countryName":"United States", "countryCode":"us"} },
