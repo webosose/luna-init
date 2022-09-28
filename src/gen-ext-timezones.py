@@ -47,6 +47,15 @@ def supplementOmittedTimeZones():
 		if requiredZone == 'America/Godthab' and requiredZone not in pytz.country_timezones['GL']:
 			pytz.country_timezones['GL'].append('America/Godthab')
 
+		if requiredZone == 'Europe/Kiev' and requiredZone not in pytz.country_timezones['UA']:
+			pytz.country_timezones['UA'].append('Europe/Kiev')
+
+		if requiredZone == 'Asia/Yangon':
+			if 'MM' in pytz.country_timezones:
+				if requiredZone not in pytz.country_timezones['MM']:
+					pytz.country_timezones['MM'].append('Asia/Yangon')
+			else:
+				pytz.country_timezones['US'].append('Asia/Yangon')
 	return
 
 def findDST(tz):
@@ -94,6 +103,15 @@ def genTimeZones(do_guess = True):
 				city = info['City']
 				description = info['Description']
 				preferred = info.get('preferred', False)
+
+			if zoneId == "Europe/Kiev":
+				zoneId = "Europe/Kyiv"
+				city = "Kyiv"
+			if zoneId == "America/Godthab":
+				zoneId = "America/Nuuk"
+				city = "Nuuk"
+			if zoneId == "Asia/Yangon" and cc != "MM":
+				cc = 'MM'
 
 			entry = {
 				'Country': country,

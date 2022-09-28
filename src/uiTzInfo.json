@@ -1,9 +1,4 @@
 {
-  "America/Argentina/San_Luis": {
-    "Country": "Argentina",
-    "Description": "San Luis Time",
-    "City": "San Luis"
-  },
   "Atlantic/Canary": {
     "Country": "Spain",
     "Description": "Western European Time",
@@ -142,11 +137,6 @@
     "Country": "Côte d'Ivoire",
     "Description": "Greenwich Mean Time",
     "City": "Yamoussoukro"
-  },
-  "Europe/Zaporozhye": {
-    "Country": "Ukraine",
-    "Description": "Eastern European Time",
-    "City": "Zaporozhye"
   },
   "America/Detroit": {
     "Country": "United States of America",
@@ -709,11 +699,6 @@
     "Country": "Mali",
     "Description": "Greenwich Mean Time",
     "City": "Bamako"
-  },
-  "Europe/Uzhgorod": {
-    "Country": "Ukraine",
-    "Description": "Eastern European Time",
-    "City": "Uzhhorod"
   },
   "Africa/Banjul": {
     "Country": "Gambia",
