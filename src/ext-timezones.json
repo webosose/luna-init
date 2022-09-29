@@ -181,7 +181,7 @@
 { "Country": "Swaziland", 		"CountryCode": "SZ", "ZoneID": "Africa\/Mbabane", 	"City": "Mbabane",  	"Description": "South Africa Time", 		"offsetFromUTC": 120, "supportsDST": 0 }, 
 { "Country": "Syria", 			"CountryCode": "SY", "ZoneID": "Asia\/Damascus", 	"City": "Damascus",  	"Description": "Eastern European Time", 	"offsetFromUTC": 120, "supportsDST": 1 },
 { "Country": "Turkey", 			"CountryCode": "TR", "ZoneID": "Europe\/Istanbul", 	"City": "Istanbul",  	"Description": "Eastern European Time", 	"offsetFromUTC": 120, "supportsDST": 1 },  
-{ "Country": "Ukraine", 		"CountryCode": "UA", "ZoneID": "Europe\/Kiev", 		"City": "Kiev",  	"Description": "Eastern European Time", 	"offsetFromUTC": 120, "supportsDST": 1 }, 
+{ "Country": "Ukraine", 		"CountryCode": "UA", "ZoneID": "Europe\/Kyiv", 		"City": "Kyiv",  	"Description": "Eastern European Time", 	"offsetFromUTC": 120, "supportsDST": 1 }, 
 { "Country": "Ukraine", 		"CountryCode": "UA", "ZoneID": "Europe\/Simferopol", 	"City": "Simferopol",  	"Description": "Eastern European Time", 	"offsetFromUTC": 120, "supportsDST": 1 }, 
 { "Country": "Ukraine", 		"CountryCode": "UA", "ZoneID": "Europe\/Uzhgorod", 	"City": "Uzhhorod",  	"Description": "Eastern European Time", 	"offsetFromUTC": 120, "supportsDST": 1 }, 
 { "Country": "Ukraine", 		"CountryCode": "UA", "ZoneID": "Europe\/Zaporozhye", 	"City": "Zaporozhye",  	"Description": "Eastern European Time", 	"offsetFromUTC": 120, "supportsDST": 1 }, 

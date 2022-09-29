@@ -551,10 +551,10 @@
     "Description": "Eastern Time",
     "City": "Nassau"
   },
-  "Europe/Kiev": {
+  "Europe/Kyiv": {
     "Country": "Ukraine",
     "Description": "Eastern European Time",
-    "City": "Kiev"
+    "City": "Kyiv"
   },
   "Europe/Prague": {
     "Country": "Czech Republic",
