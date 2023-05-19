@@ -39,7 +39,7 @@
 		"AllowGenericTimezones" : true,
 		"AllowMCCAssistedTimezones" : true,
 		"AllowNTPTime" : true,
-		"timeSources" : ["ntp", "sdp","micom"],
+		"timeSources" : ["sdp","broadcast-adjusted","broadcast","micom","ntp"],
 		"timeDriftPeriodHr": -1,
 		"dockModeSoundPref" : "systemsettings",
 		"x_palm_textinput" : {
