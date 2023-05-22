@@ -44,24 +44,12 @@ add_custom_target(generate ALL DEPENDS ext-timezones.json)
 
 # install json files in /usr/palm
 MESSAGE (STATUS, "Install json files in ${WEBOS_INSTALL_WEBOS_PREFIX}")
-if(WEBOS_TARGET_DISTRO STREQUAL "webos")
-	if(WEBOS_TARGET_MACHINE STREQUAL "raspberrypi4" OR WEBOS_TARGET_MACHINE STREQUAL "raspberrypi4-64" OR WEBOS_TARGET_MACHINE STREQUAL "qemux86-64" OR  WEBOS_TARGET_MACHINE STREQUAL "qemux86")
-            install(DIRECTORY files/conf/ DESTINATION ${WEBOS_INSTALL_WEBOS_PREFIX}
-            PATTERN "svn"         EXCLUDE
-            PATTERN ".svn"        EXCLUDE
-	    PATTERN "fonts"       EXCLUDE
-	    PATTERN "region.json" EXCLUDE
-	    PATTERN ".json"       PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE
-            )
-        endif()
-else()
 install(FILES files/conf/command-resource-handlers.json DESTINATION ${WEBOS_INSTALL_WEBOS_PREFIX}
 	PERMISSIONS OWNER_READ OWNER_WRITE GROUP_READ WORLD_READ)
 install(FILES files/conf/default-dock-positions.json DESTINATION ${WEBOS_INSTALL_WEBOS_PREFIX}
 	PERMISSIONS OWNER_READ OWNER_WRITE GROUP_READ WORLD_READ)
 install(FILES files/conf/locale.txt DESTINATION ${WEBOS_INSTALL_WEBOS_PREFIX}
 	PERMISSIONS OWNER_READ OWNER_WRITE GROUP_READ WORLD_READ)
-endif()
 install(FILES ${ext_timezones_json} DESTINATION ${WEBOS_INSTALL_WEBOS_PREFIX}
 	PERMISSIONS OWNER_READ OWNER_WRITE)
 
@@ -81,17 +69,19 @@ install(DIRECTORY files/conf/fonts DESTINATION ${WEBOS_INSTALL_DATADIR}
         PATTERN ".txt" PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE
 )
 
-if(WEBOS_TARGET_DISTRO STREQUAL "webos")
-	if(WEBOS_TARGET_MACHINE STREQUAL "raspberrypi4" OR WEBOS_TARGET_MACHINE STREQUAL "raspberrypi4-64" OR WEBOS_TARGET_MACHINE STREQUAL "qemux86-64" OR  WEBOS_TARGET_MACHINE STREQUAL "qemux86")
-              install(FILES files/conf/defaultPreferences.txt DESTINATION ${WEBOS_INSTALL_WEBOS_SYSCONFDIR}
-                      PERMISSIONS OWNER_READ OWNER_WRITE GROUP_READ WORLD_READ)
-        endif()
+if(${WEBOS_TARGET_DISTRO} STREQUAL "signage")
+    install(FILES files/conf/signage/defaultPreferences.txt DESTINATION ${WEBOS_INSTALL_WEBOS_SYSCONFDIR}
+        PERMISSIONS OWNER_READ OWNER_WRITE GROUP_READ WORLD_READ)
+elseif(${WEBOS_TARGET_DISTRO} STREQUAL "starfish")
+    install(FILES files/conf/starfish/defaultPreferences.txt DESTINATION ${WEBOS_INSTALL_WEBOS_SYSCONFDIR}
+        PERMISSIONS OWNER_READ OWNER_WRITE GROUP_READ WORLD_READ)
+elseif(${WEBOS_TARGET_DISTRO} STREQUAL "webos-pro")
+    install(FILES files/conf/webos/defaultPreferences.txt DESTINATION ${WEBOS_INSTALL_WEBOS_SYSCONFDIR}
+        PERMISSIONS OWNER_READ OWNER_WRITE GROUP_READ WORLD_READ)
+elseif(${WEBOS_TARGET_DISTRO} STREQUAL "apollo")
+    install(FILES files/conf/apollo/defaultPreferences.txt DESTINATION ${WEBOS_INSTALL_WEBOS_SYSCONFDIR}
+        PERMISSIONS OWNER_READ OWNER_WRITE GROUP_READ WORLD_READ)
 else()
-set(default_preferences_directory "${WEBOS_TARGET_DISTRO}")
-	if("${WEBOS_TARGET_DISTRO}" STREQUAL "webos-pro")
-		# this is the only exception
-		set(default_preferences_directory "webos")
-	endif()
-install(FILES files/conf/${default_preferences_directory}/defaultPreferences.txt DESTINATION ${WEBOS_INSTALL_WEBOS_SYSCONFDIR}
-	PERMISSIONS OWNER_READ OWNER_WRITE GROUP_READ WORLD_READ)
+    install(FILES files/conf/defaultPreferences.txt DESTINATION ${WEBOS_INSTALL_WEBOS_SYSCONFDIR}
+        PERMISSIONS OWNER_READ OWNER_WRITE GROUP_READ WORLD_READ)
 endif()
