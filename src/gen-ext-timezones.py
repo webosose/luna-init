@@ -47,8 +47,8 @@ def supplementOmittedTimeZones():
 		if requiredZone == 'America/Godthab' and requiredZone not in pytz.country_timezones['GL']:
 			pytz.country_timezones['GL'].append('America/Godthab')
 
-		if requiredZone == 'Europe/Kiev' and requiredZone not in pytz.country_timezones['UA']:
-			pytz.country_timezones['UA'].append('Europe/Kiev')
+		if requiredZone == 'Europe/Kyiv' and requiredZone not in pytz.country_timezones['UA']:
+			pytz.country_timezones['UA'].append('Europe/Kyiv')
 
 		if requiredZone == 'Asia/Yangon':
 			if 'MM' in pytz.country_timezones:
@@ -104,7 +104,7 @@ def genTimeZones(do_guess = True):
 				description = info['Description']
 				preferred = info.get('preferred', False)
 
-			if zoneId == "Europe/Kiev":
+			if zoneId == "Europe/Kyiv":
 				zoneId = "Europe/Kyiv"
 				city = "Kyiv"
 			if zoneId == "America/Godthab":
