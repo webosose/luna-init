@@ -1,4 +1,4 @@
-# Copyright (c) 2012-2020 LG Electronics, Inc.
+# Copyright (c) 2012-2024 LG Electronics, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -69,19 +69,6 @@ install(DIRECTORY files/conf/fonts DESTINATION ${WEBOS_INSTALL_DATADIR}
         PATTERN ".txt" PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE
 )
 
-if(${WEBOS_TARGET_DISTRO} STREQUAL "signage")
-    install(FILES files/conf/signage/defaultPreferences.txt DESTINATION ${WEBOS_INSTALL_WEBOS_SYSCONFDIR}
-        PERMISSIONS OWNER_READ OWNER_WRITE GROUP_READ WORLD_READ)
-elseif(${WEBOS_TARGET_DISTRO} STREQUAL "starfish")
-    install(FILES files/conf/starfish/defaultPreferences.txt DESTINATION ${WEBOS_INSTALL_WEBOS_SYSCONFDIR}
-        PERMISSIONS OWNER_READ OWNER_WRITE GROUP_READ WORLD_READ)
-elseif(${WEBOS_TARGET_DISTRO} STREQUAL "webos-pro")
-    install(FILES files/conf/webos/defaultPreferences.txt DESTINATION ${WEBOS_INSTALL_WEBOS_SYSCONFDIR}
-        PERMISSIONS OWNER_READ OWNER_WRITE GROUP_READ WORLD_READ)
-elseif(${WEBOS_TARGET_DISTRO} STREQUAL "apollo")
-    install(FILES files/conf/apollo/defaultPreferences.txt DESTINATION ${WEBOS_INSTALL_WEBOS_SYSCONFDIR}
-        PERMISSIONS OWNER_READ OWNER_WRITE GROUP_READ WORLD_READ)
-else()
-    install(FILES files/conf/defaultPreferences.txt DESTINATION ${WEBOS_INSTALL_WEBOS_SYSCONFDIR}
-        PERMISSIONS OWNER_READ OWNER_WRITE GROUP_READ WORLD_READ)
-endif()
+# Can be replaced with a distro-specific version by recipe
+install(FILES files/conf/defaultPreferences.txt DESTINATION ${WEBOS_INSTALL_WEBOS_SYSCONFDIR}
+    PERMISSIONS OWNER_READ OWNER_WRITE GROUP_READ WORLD_READ)
